@@ -1,3 +1,3 @@
-function HellowWorld() {
-  return <div>Hellow World!</div>
+export function HellowWorld() {
+  return <div>Hello World!</div>
 }
