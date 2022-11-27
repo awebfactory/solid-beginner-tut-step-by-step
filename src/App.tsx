@@ -6,7 +6,7 @@ import styles from "./App.module.css"
 
 const App: Component = () => {
   return (
-    <div>
+    <div style="padding: 1rem">
       <h1>Welcome</h1>
       <HellowWorld />
     </div>
