@@ -1,4 +1,4 @@
-import { createSignal } from "solid-js"
+import { createSignal, For } from "solid-js"
 
 type Book = {
   title: string
@@ -9,6 +9,8 @@ const initialBooks: Book[] = [
   { title: "Code Complete", author: "Steve McConnell" },
   { title: "The Hobbit", author: "J.R.R. Tolkien" },
   { title: "Living a Feminist Life", author: "Sarah Ahmed" },
+  { title: "Communist Manifesto", author: "Marx & Engels" },
+  { title: "Holy Bible", author: "God knows" },
 ]
 
 export function BookList() {
@@ -16,18 +18,16 @@ export function BookList() {
 
   return (
     <ul>
-      <li>
-        {books()[0].title}{" "}
-        <span style={{ "font-style": "italic" }}>({books()[0].author})</span>
-      </li>
-      <li>
-        {books()[1].title}{" "}
-        <span style={{ "font-style": "italic" }}>({books()[1].author})</span>
-      </li>
-      <li>
-        {books()[2].title}{" "}
-        <span style={{ "font-style": "italic" }}>({books()[1].author})</span>
-      </li>
+      <For each={books()}>
+        {(book) => {
+          return (
+            <li>
+              {book.title}
+              <span style={{ "font-style": "italic" }}> ({book.author})</span>
+            </li>
+          )
+        }}
+      </For>
     </ul>
   )
 }
