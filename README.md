@@ -1,4 +1,17 @@
-## Usage
+# My Beginner Solid App
+
+- Following [Getting Started with Solid (Beginner's Tutorial)](https://docs.solidjs.com/guides/tutorials/getting-started-with-solid/welcome) step-by-step with commits
+- To see the final results, clone the repo, then do
+
+```bash
+$ npm install # or pnpm install or yarn install
+$ npm run dev # or pnpm dev
+```
+
+- and open browser at http://localhost:3000`
+- Check out earlier commits or see commit diffs to see how each step is implemented
+
+## Usage (_from original template_)
 
 Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
 
