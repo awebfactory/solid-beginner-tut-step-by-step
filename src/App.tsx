@@ -29,7 +29,7 @@ function Bookshelf(props: BookshelfProps) {
     <div>
       <h2>{props.name}'s Bookshelf</h2>
       <BookList books={books()} />
-      <AddBook />
+      <AddBook setBooks={setBooks} />
       <h2>His first counter</h2>
       <Counter />
     </div>
